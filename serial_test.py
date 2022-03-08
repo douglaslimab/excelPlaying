@@ -10,11 +10,11 @@ def read():
 
 
 def write(data_tx):
-    uart_1.write(str(data_tx, 'utf-8'))
+    uart_1.write(bytes(data_tx, 'utf-8'))
 
 
 while True:
-    write(data)
+    write('a')
     data = read()
 
     if str(data, 'utf-8') != '':
